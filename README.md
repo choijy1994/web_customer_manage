@@ -3,11 +3,11 @@
 ### Tech
 #### BE
 <br>
-- spring-boot(gradle)
-- Java8
-- MySQL
-- MyBatis
-(미정)spring-batch
-(미정)spring-quartz
+  - spring-boot(gradle) <br>
+  - Java8 <br>
+  - MySQL <br>
+  - MyBatis <br>
+(미정)spring-batch <br>
+(미정)spring-quartz <br>
 
 #### FE
