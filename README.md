@@ -2,8 +2,8 @@
 <br><br>
 ### Project : 카페 회원 정보 관리 시스템(쿠폰)
 <br>
-###Tech
-####BE
+### Tech
+#### BE
 - spring-boot(gradle)
 - Java8
 - MySQL
@@ -11,4 +11,4 @@
 (미정)spring-batch
 (미정)spring-quartz
 <br>
-####FE
+#### FE
