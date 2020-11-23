@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.querencia.customer.demo.repository.CustomerMapper">
+    <select id="selectCustomerByName" parameterType="String" resultType="com.querencia.customer.demo.domain.CustomerDto">
+        SELECT
+            NAME,
+            PHONE_NUMBER,
+            STAMP,
+            COUPON_NUM,
+            REG_DATE,
+            MOD_DATE
+        FROM Customer
+        WHERE NAME = #{name}
+    </select>
+</mapper>
