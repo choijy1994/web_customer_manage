@@ -15,4 +15,39 @@
         FROM Customer
         WHERE NAME = #{name}
     </select>
+
+    <select id="selectCustomerByPhone" parameterType="String" resultType="com.querencia.customer.demo.domain.CustomerDto">
+        SELECT
+            NAME,
+            PHONE_NUMBER,
+            STAMP,
+            COUPON_NUM,
+            REG_DATE,
+            MOD_DATE
+        FROM Customer
+        WHERE PHONE_NUMBER = #{phoneNumber}
+    </select>
+
+    <select id="allCustomer" resultType="com.querencia.customer.demo.domain.CustomerDto">
+        SELECT
+            NAME,
+            PHONE_NUMBER,
+            STAMP,
+            COUPON_NUM,
+            REG_DATE,
+            MOD_DATE
+        FROM Customer
+    </select>
+
+    <insert id="insertCustomer" parameterType="com.querencia.customer.demo.domain.CustomerDto">
+        INSERT INTO Customer
+        VALUES (
+            #{name},
+            #{phoneNumber},
+            #{stamp},
+            #{couponNum},
+            #{regDate},
+            #{modDate}
+        )
+    </insert>
 </mapper>

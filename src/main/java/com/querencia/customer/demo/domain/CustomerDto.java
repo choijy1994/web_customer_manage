@@ -53,27 +53,5 @@ public class CustomerDto {
         return true;
     }
 
-    public String getName() {
-        return name;
-    }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public int getStamp() {
-        return stamp;
-    }
-
-    public int getCouponNum() {
-        return couponNum;
-    }
-
-    public LocalDateTime getRegDate() {
-        return regDate;
-    }
-
-    public LocalDateTime getModDate() {
-        return modDate;
-    }
 }
