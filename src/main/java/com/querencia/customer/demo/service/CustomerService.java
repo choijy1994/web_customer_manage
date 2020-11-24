@@ -17,4 +17,21 @@ public class CustomerService {
     public CustomerDto selectCustomerByName(String name){
         return customerMapper.selectCustomerByName(name);
     }
+
+    public CustomerDto selectCustomerByPhone(String phoneNumber){
+        return customerMapper.selectCustomerByPhone(phoneNumber);
+    }
+    public List<CustomerDto> allCustomer(){
+        return customerMapper.allCustomer();
+    }
+    public void insertCustomer(CustomerDto customer){
+        customerMapper.insertCustomer(customer);
+    }
+    public void addStamp(String name, String phoneNumber){
+        customerMapper.addStamp(name, phoneNumber);
+    }
+
+    public void useCoupon(String name, String phoneNumber){
+        customerMapper.useCoupon(name, phoneNumber);
+    }
 }
