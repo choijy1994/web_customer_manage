@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -24,7 +25,15 @@ public class CustomerService {
     public List<CustomerDto> allCustomer(){
         return customerMapper.allCustomer();
     }
-    public void insertCustomer(CustomerDto customer){
+    public void insertCustomer(String name, String phoneNumber, int stamp, int couponNum, String regDate, String modDate){
+        CustomerDto customer = new CustomerDto(
+                name,
+                phoneNumber,
+                stamp,
+                couponNum,
+                regDate,
+                modDate
+        );
         customerMapper.insertCustomer(customer);
     }
     public void addStamp(String name, String phoneNumber){
