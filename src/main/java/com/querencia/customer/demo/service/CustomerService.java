@@ -14,7 +14,7 @@ public class CustomerService {
     @Autowired
     private CustomerMapper customerMapper;
 
-    public String selectCustomerByName(String name){
-        return customerMapper.selectCustomerByName(name).toString();
+    public CustomerDto selectCustomerByName(String name){
+        return customerMapper.selectCustomerByName(name);
     }
 }

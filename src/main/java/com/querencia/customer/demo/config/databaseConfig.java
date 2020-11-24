@@ -14,7 +14,7 @@ import javax.sql.DataSource;
 
 @Slf4j
 @Configuration
-@MapperScan(basePackages = "com.querencia.customer.demo.domain.CustomerDto")
+@MapperScan(basePackages = "com.querencia.customer.demo.repository")
 public class databaseConfig {
     @Autowired
     private ApplicationContext applicationContext;
@@ -25,8 +25,9 @@ public class databaseConfig {
     @Bean
     public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception{
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+        sqlSessionFactoryBean.setConfigLocation(applicationContext.getResource("classpath:mybatis-mapper.xml"));
         sqlSessionFactoryBean.setDataSource(dataSource);
-        sqlSessionFactoryBean.setMapperLocations(applicationContext.getResource("classpath:/mapper/*.xml"));
+        sqlSessionFactoryBean.setMapperLocations(applicationContext.getResources("classpath:/mapper/*.xml"));
         return sqlSessionFactoryBean.getObject();
     }
 
