@@ -28,7 +28,7 @@ public class webRestController {
     }
     @GetMapping("/insertCusomer")
     public void insetCustomer(){
-        //return customerService.insertCoustomer();
+        //return customerService.insertCustomer();
     }
 
     @GetMapping("/addStamp")
